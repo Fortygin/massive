@@ -25,16 +25,28 @@ namespace massive3ver
             {
                 array[i] = rdn.Next();
             }
-                
-        
 
         }
 
+        static void RandomArrayTwoMassive(int[,] arr)
+        {
+            int[,] array = new int[5, 10];
+            Random rdn = new Random();
+            for (int i = 0; i < 5; i++)
+            {
+                for (int j = 0; j < 10; j++)
+                {
+                    array[i, j] = rdn.Next(100);
+                    Console.Write(array[i, j]);
+                }
+                Console.WriteLine();
+            }
+        }
        
 
         static void Main(string[] args)
         {
-            
+          
             Console.ReadLine();
         }
     }
