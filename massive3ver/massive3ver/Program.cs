@@ -17,6 +17,21 @@ namespace massive3ver
 
         }
 
+        static void RandomArray(int[] arr)
+        {
+            Random rdn = new Random();
+            int[] array = new int[10];
+            for (int i = 0; i < array.Length; i++)
+            {
+                array[i] = rdn.Next();
+            }
+                
+        
+
+        }
+
+       
+
         static void Main(string[] args)
         {
             
