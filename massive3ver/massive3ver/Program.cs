@@ -8,29 +8,32 @@ namespace massive3ver
 {
     class Program
     {
-        static void IntArray(int[] arr)
+
+
+        static void FillIntArray(int[] arr)
         {
-            for (int i = 0; i < 9; i++)
+            for (int i = 0; i < arr.Length; i++)
             {
-                Console.WriteLine(i);
+                arr[i] = i;
+
             }
 
         }
 
-        static void RandomArray(int[] arr)
+        static void FillRandomIntArray(int[] arr)
         {
             Random rdn = new Random();
-            int[] array = new int[10];
-            for (int i = 0; i < array.Length; i++)
+
+            for (int i = 0; i < arr.Length; i++)
             {
-                array[i] = rdn.Next();
+                arr[i] = rdn.Next();
             }
 
         }
 
-        static void RandomArrayTwoMassive(int[,] arr)
+        static void FillRandomIntMatrixArray(int[,] arr)
         {
-            int[,] array = new int[5, 10];
+
             Random rdn = new Random();
             for (int i = 0; i < 5; i++)
             {
@@ -42,12 +45,58 @@ namespace massive3ver
                 Console.WriteLine();
             }
         }
-       
 
+        static string[] UniteTwoArraysOfStrings(string[] arr, string[] arr2)
+        {
+
+        }
+
+        static void PrintMaxAndMinOfArray(int[] arr)
+        {
+
+        }
+
+        static float AverageArithmetic(float[] arr)
+        {
+
+        }
+
+        static int SearchIndexInMassive(string[] arr, string a)
+        {
+
+        }
+
+        static List<int> GetUniqueElements(List<int> list)
+        {
+
+        }
+
+        static bool CheckNumberInList(List<int> list, int number)
+        {
+
+        }
+
+
+
+
+        static void PrintArray(int[] arr)
+        {
+            for (int i = 0; i < arr.Length; i++)
+            {
+                Console.Write("{0} ", arr[i]);
+
+            }
+            Console.ReadLine();
+        }
         static void Main(string[] args)
         {
-          
-            Console.ReadLine();
+            int[] a = new int[10];
+            FillIntArray(a);
+            PrintArray(a);
+            int[] array = new int[10];
+            FillRandomIntArray(array);
+            PrintArray(array);
+
         }
     }
 }
