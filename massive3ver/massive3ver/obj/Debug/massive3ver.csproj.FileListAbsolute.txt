@@ -1,0 +1,6 @@
+C:\Users\User\Desktop\Слава\программирование\generatorValue\massive\massive3ver\massive3ver\bin\Debug\massive3ver.exe.config
+C:\Users\User\Desktop\Слава\программирование\generatorValue\massive\massive3ver\massive3ver\bin\Debug\massive3ver.exe
+C:\Users\User\Desktop\Слава\программирование\generatorValue\massive\massive3ver\massive3ver\bin\Debug\massive3ver.pdb
+C:\Users\User\Desktop\Слава\программирование\generatorValue\massive\massive3ver\massive3ver\obj\Debug\massive3ver.csprojAssemblyReference.cache
+C:\Users\User\Desktop\Слава\программирование\generatorValue\massive\massive3ver\massive3ver\obj\Debug\massive3ver.exe
+C:\Users\User\Desktop\Слава\программирование\generatorValue\massive\massive3ver\massive3ver\obj\Debug\massive3ver.pdb
