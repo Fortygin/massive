@@ -35,46 +35,47 @@ namespace massive3ver
         {
 
             Random rdn = new Random();
-            for (int i = 0; i < 5; i++)
-            {
-                for (int j = 0; j < 10; j++)
+            for (int i = 0; i < arr.GetLength(0); i++)
+                for (int j = 0; j < arr.GetLength(1); j++)
                 {
-                    array[i, j] = rdn.Next(100);
-                    Console.Write(array[i, j]);
+                    arr[i,j] = rdn.Next();
+                    Console.Write(arr[i,j]  + " ");
+                    
                 }
-                Console.WriteLine();
-            }
+            
+                
+            
         }
 
-        static string[] UniteTwoArraysOfStrings(string[] arr, string[] arr2)
-        {
+        //static string[] UniteTwoArraysOfStrings(string[] arr, string[] arr2)
+        //{
+        //    return
+        //}
 
-        }
+        //static void PrintMaxAndMinOfArray(int[] arr)
+        //{
 
-        static void PrintMaxAndMinOfArray(int[] arr)
-        {
+        //}
 
-        }
+        //static float AverageArithmetic(float[] arr)
+        //{
 
-        static float AverageArithmetic(float[] arr)
-        {
+        //}
 
-        }
+        //static int SearchIndexInMassive(string[] arr, string a)
+        //{
 
-        static int SearchIndexInMassive(string[] arr, string a)
-        {
+        //}
 
-        }
+        //static List<int> GetUniqueElements(List<int> list)
+        //{
 
-        static List<int> GetUniqueElements(List<int> list)
-        {
+        //}
 
-        }
+        //static bool CheckNumberInList(List<int> list, int number)
+        //{
 
-        static bool CheckNumberInList(List<int> list, int number)
-        {
-
-        }
+        //}
 
 
 
@@ -88,6 +89,17 @@ namespace massive3ver
             }
             Console.ReadLine();
         }
+
+        static void PrintDoubleArray(int [,] arr)
+        {
+            for (int i = 0; i < arr.GetLength(0); i++)
+                for (int j = 0; j < arr.GetLength(1); j++)
+                {
+                    
+                    Console.Write(arr[i, j] + " ");
+
+                }
+        }
         static void Main(string[] args)
         {
             int[] a = new int[10];
@@ -96,6 +108,11 @@ namespace massive3ver
             int[] array = new int[10];
             FillRandomIntArray(array);
             PrintArray(array);
+            int[,] doubleArray = new int[5,10];
+            FillRandomIntMatrixArray(doubleArray);
+            PrintDoubleArray(doubleArray);
+            Console.ReadKey();
+
 
         }
     }
