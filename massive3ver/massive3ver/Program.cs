@@ -39,14 +39,22 @@ namespace massive3ver
                 for (int j = 0; j < arr.GetLength(1); j++)
                 {
                     arr[i,j] = rdn.Next();
-                    Console.Write(arr[i,j]  + " ");
-                    
                 }
-            
-                
-            
+  
         }
 
+        static void FillRandomIntNotchedArray(int[][] arr)
+        {
+
+            Random rdn = new Random();
+            for (int i = 0; i < arr.Length; i++)
+                for (int j = 0; j < arr[i].Length; j++)
+                {
+                    arr[i][j] = rdn.Next();
+                    Console.WriteLine(arr[i][j] + " ");
+                }
+
+        }
         //static string[] UniteTwoArraysOfStrings(string[] arr, string[] arr2)
         //{
         //    return
@@ -102,17 +110,25 @@ namespace massive3ver
         }
         static void Main(string[] args)
         {
-            int[] a = new int[10];
-            FillIntArray(a);
-            PrintArray(a);
-            int[] array = new int[10];
-            FillRandomIntArray(array);
-            PrintArray(array);
-            int[,] doubleArray = new int[10,5];
-            FillRandomIntMatrixArray(doubleArray);
-            PrintDoubleArray(doubleArray);
-            Console.ReadKey();
+            //int[] a = new int[10];
+            //FillIntArray(a);
+            //PrintArray(a);
+            //int[] array = new int[10];
+            //FillRandomIntArray(array);
+            //PrintArray(array);
+            //int[,] doubleArray = new int[10, 5];
+            //FillRandomIntMatrixArray(doubleArray);
+            //PrintDoubleArray(doubleArray);
+            //Console.ReadKey();
+            int[][] notched = new int[10][];
+            notched[0] = new int[5];
+            for (int i = 0; i < notched.Length; i++)
+            {
+                notched[i] = new int[10];
 
+            }
+            FillRandomIntNotchedArray(notched);
+            Console.ReadKey();
 
         }
     }
