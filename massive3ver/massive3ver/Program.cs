@@ -108,7 +108,7 @@ namespace massive3ver
             int[] array = new int[10];
             FillRandomIntArray(array);
             PrintArray(array);
-            int[,] doubleArray = new int[5,10];
+            int[,] doubleArray = new int[10,5];
             FillRandomIntMatrixArray(doubleArray);
             PrintDoubleArray(doubleArray);
             Console.ReadKey();
