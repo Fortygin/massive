@@ -55,20 +55,59 @@ namespace massive3ver
                 }
 
         }
-        //static string[] UniteTwoArraysOfStrings(string[] arr, string[] arr2)
-        //{
-        //    return
-        //}
+        static string[] UniteTwoArraysOfStrings(string[] arr, string[] arr2)
+        {
+            string[] c = new string[arr2.Length];
 
-        //static void PrintMaxAndMinOfArray(int[] arr)
-        //{
+            for (int i = 0; i < arr2.Length; i++)
+                if (i < arr.Length)
+                    c[i] = arr[i] + arr2[i];
+                else
+                    c[i] = arr2[i];
+            Array.ForEach(c, x => Console.Write(x + " "));
+            Console.ReadKey(true);
 
-        //}
 
-        //static float AverageArithmetic(float[] arr)
-        //{
 
-        //}
+            return c;
+        }
+
+        static void PrintMaxAndMinOfArray(int[] arr)
+        {
+            int MaxValue = arr[0];
+            for (int i = 0; i < arr.Length; i++)
+            {
+                if (MaxValue < arr[i])
+                {
+                    MaxValue = arr[i];
+                }
+            }
+
+            Console.WriteLine("Max Value = {0}", MaxValue);
+
+            int MinValue = arr[0];
+            for (int j = 0; j < arr.Length; j++)
+            {
+                if(MinValue > arr[j])
+                {
+                    MinValue = arr[j];
+                }
+                    
+            }
+            Console.WriteLine("Min Value = {0}", MinValue);
+
+        }
+
+        static float AverageArithmetic(float[] arr)
+        {
+            float sum = 0;
+            for (int i = 0; i < arr.Length; i++)
+                sum += arr[i];
+            float Average = sum / arr.Length;
+
+            Console.WriteLine(Average);
+            return Average;
+        }
 
         //static int SearchIndexInMassive(string[] arr, string a)
         //{
@@ -110,24 +149,33 @@ namespace massive3ver
         }
         static void Main(string[] args)
         {
-            //int[] a = new int[10];
-            //FillIntArray(a);
-            //PrintArray(a);
-            //int[] array = new int[10];
-            //FillRandomIntArray(array);
-            //PrintArray(array);
-            //int[,] doubleArray = new int[10, 5];
-            //FillRandomIntMatrixArray(doubleArray);
-            //PrintDoubleArray(doubleArray);
-            //Console.ReadKey();
+            int[] a = new int[10];
+            FillIntArray(a);
+            PrintArray(a);
+            int[] array = new int[10];
+            FillRandomIntArray(array);
+            PrintArray(array);
+            int[,] doubleArray = new int[10, 5];
+            FillRandomIntMatrixArray(doubleArray);
+            PrintDoubleArray(doubleArray);
+            Console.ReadKey();
             int[][] notched = new int[10][];
-            notched[0] = new int[5];
+
             for (int i = 0; i < notched.Length; i++)
             {
                 notched[i] = new int[10];
 
             }
             FillRandomIntNotchedArray(notched);
+            string[] array1 = { "Sun", "Mun" };
+            string[] array2 = { "Wen", "Ken" };
+            UniteTwoArraysOfStrings(array1, array2);
+            int[] IntArray = { 1, 0, -5, 66, 21 };
+            PrintMaxAndMinOfArray(IntArray);
+            float[] ArrayFloat = {30, 21, 11};
+            AverageArithmetic(ArrayFloat);
+            
+
             Console.ReadKey();
 
         }
