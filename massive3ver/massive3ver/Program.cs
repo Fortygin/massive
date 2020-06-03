@@ -108,17 +108,21 @@ namespace massive3ver
             return Average;
         }
 
-        //static int SearchIndexInMassive(string[] arr, string a)
-        //{
-        //    for (int i = 0; i < arr.Length; i++)
-        //    {
-        //        arr[i] = i;
+        static int SearchIndexInMassive(string[] arr, string a)
+        {
+
+            for (int i = 0; i < arr.Length; i++)
+            {
+                if (arr[i] == a)
+                   return i;
+                
+            }
+
+            return -1;
+        }
 
 
-        //    }
 
-
-            
 
             //static List<int> GetUniqueElements(List<int> list)
             //{
@@ -158,31 +162,34 @@ namespace massive3ver
         }
         static void Main(string[] args)
         {
-                //int[] a = new int[10];
-                //FillIntArray(a);
-                //PrintArray(a);
-                //int[] array = new int[10];
-                //FillRandomIntArray(array);
-                //PrintArray(array);
-                //int[,] doubleArray = new int[10, 5];
-                //FillRandomIntMatrixArray(doubleArray);
-                //PrintDoubleArray(doubleArray);
-                //Console.ReadKey();
-                //int[][] notched = new int[10][];
+            //int[] a = new int[10];
+            //FillIntArray(a);
+            //PrintArray(a);
+            //int[] array = new int[10];
+            //FillRandomIntArray(array);
+            //PrintArray(array);
+            //int[,] doubleArray = new int[10, 5];
+            //FillRandomIntMatrixArray(doubleArray);
+            //PrintDoubleArray(doubleArray);
+            //Console.ReadKey();
+            //int[][] notched = new int[10][];
 
-                //for (int i = 0; i < notched.Length; i++)
-                //{
-                //    notched[i] = new int[10];
+            //for (int i = 0; i < notched.Length; i++)
+            //{
+            //    notched[i] = new int[10];
 
-                //}
-                //FillRandomIntNotchedArray(notched);
-                //string[] array1 = { "Sun", "Mun" };
-                //string[] array2 = { "Wen", "Ken" };
-                //UniteTwoArraysOfStrings(array1, array2);
-                int[] IntArray = { 1, 0, -5, 66, 21 };
-                PrintMaxAndMinOfArray(IntArray);
-                //float[] ArrayFloat = {30, 21, 11};
-                //AverageArithmetic(ArrayFloat);
+            //}
+            //FillRandomIntNotchedArray(notched);
+            //string[] array1 = { "Sun", "Mun" };
+            //string[] array2 = { "Wen", "Ken" };
+            //UniteTwoArraysOfStrings(array1, array2);
+            //int[] IntArray = { 1, 0, -5, 66, 21 };
+            //PrintMaxAndMinOfArray(IntArray);
+            //float[] ArrayFloat = {30, 21, 11};
+            //AverageArithmetic(ArrayFloat);
+            string[] cities = { "Chelyabinsk", "Moscow", "Novosibirsk" };
+            string city = "Moscow";  
+            SearchIndexInMassive(cities, city);
 
 
                 Console.ReadKey();
