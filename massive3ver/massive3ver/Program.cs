@@ -27,6 +27,7 @@ namespace massive3ver
             for (int i = 0; i < arr.Length; i++)
             {
                 arr[i] = rdn.Next();
+                Console.WriteLine(arr[i]);
             }
 
         }
@@ -68,43 +69,48 @@ namespace massive3ver
             {
                 c[i + arr.Length] = arr2[i];
             }
-                      
-            
-            
-            foreach (string result in c)
-                Console.Write(result);
-
-
+    
             return c;
         }
 
         static void PrintMaxAndMinOfArray(int[] arr)
         {
-            int MaxValue = arr[0];
-            int MinValue = arr[0];
-            for (int i = 0; i < arr.Length; i++)
+            if (arr.Length == 0)
+                Console.WriteLine("The Array is empty");
+
+            else
             {
-                if (MaxValue < arr[i])
-                    MaxValue = arr[i];
-                if (MinValue > arr[i])
-                    MinValue = arr[i];
-                
+                int MaxValue = arr[0];
+                int MinValue = arr[0];
+                for (int i = 1; i < arr.Length; i++)
+                {
+                    if (MaxValue < arr[i])
+                        MaxValue = arr[i];
+                    if (MinValue > arr[i])
+                        MinValue = arr[i];
+
+                }
+
+                Console.WriteLine("Max Value = {0}", MaxValue);
+
+                Console.WriteLine("Min Value = {0}", MinValue);
             }
-
-            Console.WriteLine("Max Value = {0}", MaxValue);
-
-            Console.WriteLine("Min Value = {0}", MinValue);
+            
 
         }
 
         static float AverageArithmetic(float[] arr)
         {
+            if (arr.Length == 0)
+            {
+                return 0;
+            }
+           
             float sum = 0;
             for (int i = 0; i < arr.Length; i++)
                 sum += arr[i];
             float Average = sum / arr.Length;
 
-            Console.WriteLine(Average);
             return Average;
         }
 
@@ -124,23 +130,36 @@ namespace massive3ver
 
 
 
-            //static List<int> GetUniqueElements(List<int> list)
+        static List<int> GetUniqueElements(List<int> list)
+        {
+          
+
+
+            //int i = 0;
+            //List<int> distinctElements = new List<int>();
+            //while (i < list.Count)
             //{
-            //    //создать новый список и вернуть его
-            //    return new list int;
-
+            //    if (!distinctElements.Contains(list[i]))
+            //        distinctElements.Add(list[i]);
+            //    i++;
             //}
+            //Console.WriteLine();
+            //return distinctElements;
+            //создать новый список и вернуть его
+            
 
-            //static bool CheckNumberInList(List<int> list, int number)
-            //{
-            //   //то же самое что с индексом
-            //    if ()
-            //}
+        }
+
+        //static bool CheckNumberInList(List<int> list, int number)
+        //{
+        //   //то же самое что с индексом
+        //    if ()
+        //}
 
 
 
 
-            static void PrintArray(int[] arr)
+        static void PrintArray(int[] arr)
         {
             for (int i = 0; i < arr.Length; i++)
             {
@@ -184,15 +203,23 @@ namespace massive3ver
             //string[] array2 = { "Wen", "Ken" };
             //UniteTwoArraysOfStrings(array1, array2);
             //int[] IntArray = { 1, 0, -5, 66, 21 };
+            //int[] intNull = { };
             //PrintMaxAndMinOfArray(IntArray);
-            //float[] ArrayFloat = {30, 21, 11};
-            //AverageArithmetic(ArrayFloat);
-            string[] cities = { "Chelyabinsk", "Moscow", "Novosibirsk" };
-            string city = "Moscow";  
-            SearchIndexInMassive(cities, city);
+            float[] ArrayFloat = { 30, 21, 11 };
+            float[] ArrayZeroFloat = new float[0];
+            AverageArithmetic(ArrayZeroFloat);
+            Console.WriteLine(AverageArithmetic(ArrayZeroFloat));
+            //Console.WriteLine(AverageArithmetic(ArrayFloat));
+            //string[] cities = { "Chelyabinsk", "Moscow", "Novosibirsk" }; d
+            //string city = "Moscow";
+            //SearchIndexInMassive(cities, city);
+            //List<int> numbers = new List<int> { 1, 2, 5, 2, 2, 1, 4 };
+            //GetUniqueElements(numbers);
+            //Console.WriteLine(GetUniqueElements(numbers));
 
 
-                Console.ReadKey();
+
+            Console.ReadKey();
 
         }
     }
