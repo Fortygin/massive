@@ -132,29 +132,38 @@ namespace massive3ver
 
         static List<int> GetUniqueElements(List<int> list)
         {
-          
 
 
-            //int i = 0;
-            //List<int> distinctElements = new List<int>();
-            //while (i < list.Count)
-            //{
-            //    if (!distinctElements.Contains(list[i]))
-            //        distinctElements.Add(list[i]);
-            //    i++;
-            //}
-            //Console.WriteLine();
-            //return distinctElements;
-            //создать новый список и вернуть его
+
+            int i = 0;
+            List<int> distinctElements = new List<int>();
+            while (i < list.Count)
+            {
+                if (!distinctElements.Contains(list[i]))
+                    distinctElements.Add(list[i]);
+                i++;
+            }
+            Console.WriteLine();
+            return distinctElements;
             
+
 
         }
 
-        //static bool CheckNumberInList(List<int> list, int number)
-        //{
-        //   //то же самое что с индексом
-        //    if ()
-        //}
+        static bool CheckNumberInList(List<int> list, int number)
+        {
+
+            for (int i = 0; i < list.Count; i++)
+            {
+                if (list[i] == number)
+                    return true;
+
+            }
+
+            return false;
+           
+
+        }
 
 
 
@@ -205,10 +214,10 @@ namespace massive3ver
             //int[] IntArray = { 1, 0, -5, 66, 21 };
             //int[] intNull = { };
             //PrintMaxAndMinOfArray(IntArray);
-            float[] ArrayFloat = { 30, 21, 11 };
-            float[] ArrayZeroFloat = new float[0];
-            AverageArithmetic(ArrayZeroFloat);
-            Console.WriteLine(AverageArithmetic(ArrayZeroFloat));
+            //float[] ArrayFloat = { 30, 21, 11 };
+            //float[] ArrayZeroFloat = new float[0];
+            //AverageArithmetic(ArrayZeroFloat);
+            //Console.WriteLine(AverageArithmetic(ArrayZeroFloat));
             //Console.WriteLine(AverageArithmetic(ArrayFloat));
             //string[] cities = { "Chelyabinsk", "Moscow", "Novosibirsk" }; d
             //string city = "Moscow";
@@ -216,6 +225,12 @@ namespace massive3ver
             //List<int> numbers = new List<int> { 1, 2, 5, 2, 2, 1, 4 };
             //GetUniqueElements(numbers);
             //Console.WriteLine(GetUniqueElements(numbers));
+            List<int> numbers = new List<int> { 1, 2, 5, 2, 2, 1, 4 };
+            int twoparams = 2;
+            CheckNumberInList(numbers, twoparams);
+            Console.WriteLine(CheckNumberInList(numbers, twoparams));
+
+
 
 
 
