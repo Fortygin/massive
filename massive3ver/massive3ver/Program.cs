@@ -150,6 +150,19 @@ namespace massive3ver
 
         }
 
+        static int[] GetUniqueElementsArrays(int [] arr)
+        {
+            int[] a = arr;
+
+            var result = a.Concat(arr).Distinct();
+
+            foreach (int s in result)
+                Console.WriteLine(s);
+
+            return a;
+
+        }
+
         static bool CheckNumberInList(List<int> list, int number)
         {
 
@@ -225,10 +238,12 @@ namespace massive3ver
             //List<int> numbers = new List<int> { 1, 2, 5, 2, 2, 1, 4 };
             //GetUniqueElements(numbers);
             //Console.WriteLine(GetUniqueElements(numbers));
-            List<int> numbers = new List<int> { 1, 2, 5, 2, 2, 1, 4 };
-            int twoparams = 2;
-            CheckNumberInList(numbers, twoparams);
-            Console.WriteLine(CheckNumberInList(numbers, twoparams));
+            //List<int> numbers = new List<int> { 1, 2, 5, 2, 2, 1, 4 };
+            //int twoparams = 2;
+            //CheckNumberInList(numbers, twoparams);
+            //Console.WriteLine(CheckNumberInList(numbers, twoparams));
+            int[] IntArray = { 1, 0, -5, 66, 21, 66, 66, 1 };
+            GetUniqueElementsArrays(IntArray);
 
 
 
