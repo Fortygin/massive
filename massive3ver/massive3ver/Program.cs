@@ -152,14 +152,51 @@ namespace massive3ver
 
         static int[] GetUniqueElementsArrays(int [] arr)
         {
-            int[] a = arr;
+            int lenth = arr.Length;
+            for (int i = 0; i < lenth; i++)
+            {
+                for (int j = (i + 1); j < lenth;)
+                {
+                    if (arr[i] == arr[j])
+                    {
+                        for (int k = j; k < lenth - 1; k++)
+                            arr[k] = arr[k + 1];
+                        lenth--;
+                    }
+                    else
+                        j++;
+                }
+            }
+            int[] distinctArray = new int[lenth];
+            for (int i = 0; i < lenth; i++)
+            {
+                distinctArray[i] = arr[i];
 
-            var result = a.Concat(arr).Distinct();
+            }
 
-            foreach (int s in result)
-                Console.WriteLine(s);
+            return distinctArray;
 
-            return a;
+            //HashSet<int> result = new HashSet<int>();
+            //for (int i = 0; i < arr.Length; i++)
+            //{
+            //    int number = arr[i];
+            //    if (!result.Contains(number))
+            //    {
+            //        result.Add(number);
+            //    }
+
+            //}
+
+            //return result.ToArray();
+
+
+
+
+            //var result = a.Concat(arr).Distinct();
+
+            //foreach (int s in result)
+            //    Console.WriteLine(s);
+
 
         }
 
@@ -242,8 +279,10 @@ namespace massive3ver
             //int twoparams = 2;
             //CheckNumberInList(numbers, twoparams);
             //Console.WriteLine(CheckNumberInList(numbers, twoparams));
-            int[] IntArray = { 1, 0, -5, 66, 21, 66, 66, 1 };
-            GetUniqueElementsArrays(IntArray);
+            int[] IntArray2 = { 1, 0, -5, 66, 21, 66, 66, 1 };
+            GetUniqueElementsArrays(IntArray2);
+            Console.WriteLine(string.Join(" ", GetUniqueElementsArrays(IntArray2)));
+            
 
 
 
